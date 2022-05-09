@@ -208,6 +208,8 @@ img {
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-right: auto;
+  margin-left: auto;
 
   text-align: center;
 
@@ -784,7 +786,7 @@ img {
   width: 100%;
 }
 
-.modal-label:not(:last-child) {
+.modal-label:not(:nth-child(4)) {
   margin-bottom: 10px;
 }
 
@@ -869,6 +871,8 @@ img {
 
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
+
+  transition: border-color var(--transition-time) var(--transition-func);
 }
 
 .checkbox-icon {
@@ -882,6 +886,10 @@ img {
 .checkbox-input:checked + .checkbox-wrapper {
   border: 0;
   background-color: var(--accent-color);
+}
+
+.checkbox-input:focus + .checkbox-wrapper {
+  border-color: var(--accent-color);
 }
 
 .checkbox-input:checked + .checkbox-wrapper .checkbox-icon {
